@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Cybersecurity Incident Tracker</title></head>
+<body>
+<h1>Incident Tracker</h1>
+<form method="post" action="/report">
+    <input type="text" name="incident" placeholder="Describe incident" required>
+    <button type="submit">Report</button>
+</form>
+<h2>Reported Incidents</h2>
+<ul>
+{% for i in incidents %}
+    <li>{{ i }}</li>
+{% endfor %}
+</ul>
+</body>
+</html>
